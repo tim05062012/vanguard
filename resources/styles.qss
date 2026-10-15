@@ -1,0 +1,688 @@
+/* =========================================================================
+   VANGUARD — JARVIS HUD
+   Фон #0D0D12, панели #16161D, акцент #00E5FF, разделители #23232E.
+   ========================================================================= */
+
+/* ---------- Корень / фон ---------- */
+QWidget {
+    background-color: #0D0D12;
+    color: #C8C8D0;
+    font-family: "Segoe UI", "Inter", sans-serif;
+    font-size: 13px;
+    selection-background-color: #00E5FF;
+    selection-color: #0D0D12;
+}
+
+QToolTip {
+    background-color: #16161D;
+    color: #C8C8D0;
+    border: 1px solid #00E5FF;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+/* ---------- Каркас окна ---------- */
+QWidget#appRoot {
+    background-color: #0D0D12;
+    border: 1px solid #23232E;
+    border-radius: 12px;
+}
+
+/* ---------- Кастомный топбар ---------- */
+QWidget#titleBar {
+    background-color: #16161D;
+    border-bottom: 1px solid #23232E;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+QLabel#appTitle {
+    color: #00E5FF;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    background: transparent;
+}
+
+QLabel#appSubtitle {
+    color: #6B6B7B;
+    font-size: 11px;
+    letter-spacing: 2px;
+    background: transparent;
+}
+
+QPushButton#winBtn, QPushButton#winCloseBtn {
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    min-width: 34px;
+    min-height: 30px;
+    max-width: 34px;
+    max-height: 30px;
+    padding: 0px;
+    color: #6B6B7B;
+}
+
+QPushButton#winBtn:hover {
+    background-color: #23232E;
+    color: #C8C8D0;
+}
+
+QPushButton#winCloseBtn:hover {
+    background-color: #FF4D6A;
+    color: #FFFFFF;
+}
+
+QPushButton#winBtn:pressed, QPushButton#winCloseBtn:pressed {
+    background-color: #2C2C3A;
+}
+
+/* ---------- Сайдбар ---------- */
+QWidget#sidebar {
+    background-color: #16161D;
+    border-right: 1px solid #23232E;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+QLabel#sidebarCaption {
+    color: #6B6B7B;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding-left: 6px;
+    background: transparent;
+}
+
+QPushButton#navButton {
+    background-color: transparent;
+    color: #8A8A99;
+    border: none;
+    border-left: 3px solid transparent;
+    border-radius: 6px;
+    padding: 11px 14px;
+    text-align: left;
+    font-size: 13px;
+}
+
+QPushButton#navButton:hover {
+    background-color: #1D1D26;
+    color: #C8C8D0;
+}
+
+QPushButton#navButton:checked {
+    background-color: #1B1B26;
+    color: #00E5FF;
+    border-left: 3px solid #00E5FF;
+    font-weight: 600;
+}
+
+QPushButton#navButton:pressed {
+    background-color: #1F1F2B;
+}
+
+QPushButton#sidebarAction {
+    background-color: transparent;
+    color: #8A8A99;
+    border: 1px solid #23232E;
+    border-radius: 6px;
+    padding: 9px 14px;
+    text-align: left;
+}
+
+QPushButton#sidebarAction:hover {
+    background-color: #1D1D26;
+    color: #00E5FF;
+    border-color: #00E5FF;
+}
+
+/* ---------- Общие заголовки страниц ---------- */
+QLabel#pageTitle {
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 600;
+    background: transparent;
+}
+
+QLabel#pageHint {
+    color: #6B6B7B;
+    font-size: 12px;
+    background: transparent;
+}
+
+QLabel#sectionTitle {
+    color: #00E5FF;
+    font-size: 11px;
+    letter-spacing: 2px;
+    background: transparent;
+}
+
+/* ---------- Панели / карточки ---------- */
+QFrame#panel {
+    background-color: #16161D;
+    border: 1px solid #23232E;
+    border-radius: 10px;
+}
+
+QLabel#hintLabel {
+    color: #6B6B7B;
+    font-size: 11px;
+    background: transparent;
+}
+
+/* ---------- Кнопки ---------- */
+QPushButton {
+    background-color: #1D1D26;
+    color: #C8C8D0;
+    border: 1px solid #2A2A36;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+QPushButton:hover {
+    background-color: #232331;
+    border-color: #3A3A4A;
+    color: #FFFFFF;
+}
+
+QPushButton:pressed {
+    background-color: #1A1A23;
+}
+
+QPushButton:disabled {
+    background-color: #16161D;
+    color: #4A4A58;
+    border-color: #23232E;
+}
+
+QPushButton#primaryBtn, QPushButton#playBtn {
+    background-color: rgba(0, 229, 255, 0.16);
+    color: #00E5FF;
+    border: 1px solid rgba(0, 229, 255, 0.45);
+    font-weight: 600;
+    padding: 8px 20px;
+}
+
+QPushButton#primaryBtn:hover, QPushButton#playBtn:hover {
+    background-color: #00E5FF;
+    color: #0D0D12;
+    border-color: #00E5FF;
+}
+
+QPushButton#primaryBtn:pressed, QPushButton#playBtn:pressed {
+    background-color: #00C4DC;
+    color: #0D0D12;
+}
+
+QPushButton#iconBtn {
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+}
+
+QPushButton#iconBtn:hover {
+    background-color: rgba(0, 229, 255, 0.12);
+    border-radius: 6px;
+}
+
+/* ---------- Поля ввода ---------- */
+QLineEdit {
+    background-color: #1B1B24;
+    border: 1px solid #2A2A36;
+    border-radius: 8px;
+    padding: 8px 10px;
+    color: #C8C8D0;
+}
+
+QLineEdit:focus {
+    border-color: #00E5FF;
+}
+
+QLineEdit:hover {
+    border-color: #3A3A4A;
+}
+
+QLineEdit:disabled {
+    background-color: #16161D;
+    color: #4A4A58;
+}
+
+QComboBox {
+    background-color: #1B1B24;
+    border: 1px solid #2A2A36;
+    border-radius: 8px;
+    padding: 7px 10px;
+    color: #C8C8D0;
+    min-height: 20px;
+}
+
+QComboBox:hover {
+    border-color: #3A3A4A;
+}
+
+QComboBox:focus {
+    border-color: #00E5FF;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: center right;
+    border: none;
+    width: 22px;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #00E5FF;
+    margin-right: 8px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #16161D;
+    border: 1px solid #2A2A36;
+    selection-background-color: rgba(0, 229, 255, 0.18);
+    selection-color: #00E5FF;
+    outline: none;
+    border-radius: 6px;
+}
+
+QSpinBox, QDoubleSpinBox {
+    background-color: #1B1B24;
+    border: 1px solid #2A2A36;
+    border-radius: 8px;
+    padding: 7px 8px;
+    color: #C8C8D0;
+}
+
+QSpinBox:focus, QDoubleSpinBox:focus {
+    border-color: #00E5FF;
+}
+
+QSlider::groove:horizontal {
+    height: 5px;
+    background: #23232E;
+    border-radius: 2px;
+}
+
+QSlider::sub-page:horizontal {
+    background: #00E5FF;
+    border-radius: 2px;
+}
+
+QSlider::handle:horizontal {
+    background: #00E5FF;
+    width: 14px;
+    height: 14px;
+    margin: -5px 0px;
+    border-radius: 7px;
+}
+
+/* ---------- Чекбоксы ---------- */
+QCheckBox {
+    spacing: 9px;
+    color: #C8C8D0;
+    background: transparent;
+}
+
+QCheckBox::indicator {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #3A3A4A;
+    border-radius: 5px;
+    background: #1B1B24;
+}
+
+QCheckBox::indicator:checked {
+    background: #00E5FF;
+    border-color: #00E5FF;
+    image: none;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #00E5FF;
+}
+
+QCheckBox::indicator:unchecked:hover {
+    background-color: rgba(0, 229, 255, 0.12);
+}
+
+
+/* ---------- Библиотека игр ---------- */
+QScrollArea {
+    border: none;
+    background: transparent;
+}
+
+QScrollArea > QWidget > QWidget {
+    background: transparent;
+}
+
+QFrame#gameCard {
+    background-color: #16161D;
+    border: 1px solid #23232E;
+    border-radius: 10px;
+    min-height: 96px;
+}
+
+QFrame#gameCard:hover {
+    border: 1px solid #00E5FF;
+    background-color: #1A1A24;
+}
+
+QLabel#gameTitle {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+    background: transparent;
+}
+
+QLabel#gamePath {
+    color: #5C5C6B;
+    font-size: 10px;
+    background: transparent;
+}
+
+QLabel#launcherBadge {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 3px 7px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+QLabel#launcherBadge[launcher="Steam"] {
+    background-color: rgba(102, 192, 244, 0.16);
+    color: #66C0F4;
+    border: 1px solid rgba(102, 192, 244, 0.4);
+}
+
+QLabel#launcherBadge[launcher="Epic"] {
+    background-color: rgba(255, 255, 255, 0.10);
+    color: #E4E4E4;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+QLabel#launcherBadge[launcher="Local"] {
+    background-color: rgba(0, 229, 255, 0.14);
+    color: #00E5FF;
+    border: 1px solid rgba(0, 229, 255, 0.4);
+}
+
+QPushButton#playBtn {
+    min-width: 96px;
+    min-height: 34px;
+}
+
+/* ---------- Мониторинг ---------- */
+QLabel#fpsValue {
+    font-family: "JetBrains Mono", "Consolas", "Courier New", monospace;
+    font-size: 72px;
+    font-weight: 700;
+    color: #00E5FF;
+    background: transparent;
+}
+
+QLabel#fpsCaption {
+    color: #6B6B7B;
+    font-size: 11px;
+    letter-spacing: 3px;
+    background: transparent;
+}
+
+QLabel#lowStat {
+    font-family: "JetBrains Mono", "Consolas", monospace;
+    color: #8A8A99;
+    font-size: 12px;
+    background: transparent;
+}
+
+QLabel#metricLabel {
+    color: #8A8A99;
+    font-size: 11px;
+    background: transparent;
+}
+
+QLabel#metricValue {
+    font-family: "JetBrains Mono", "Consolas", monospace;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    background: transparent;
+}
+
+QLabel#metricValueHot {
+    font-family: "JetBrains Mono", "Consolas", monospace;
+    color: #00E5FF;
+    font-size: 14px;
+    font-weight: 600;
+    background: transparent;
+}
+
+QLabel#fpsStatus {
+    color: #6B6B7B;
+    font-size: 12px;
+    background: transparent;
+}
+
+QFrame#graphFrame {
+    background-color: #16161D;
+    border: 1px solid #23232E;
+    border-radius: 10px;
+}
+
+QLabel#graphCaption {
+    color: #6B6B7B;
+    font-size: 10px;
+    letter-spacing: 2px;
+    background: transparent;
+}
+
+/* ---------- Отчёт оптимизации ---------- */
+QLabel#reportHeadline {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    background: transparent;
+}
+
+QLabel#reportStat {
+    font-family: "JetBrains Mono", "Consolas", monospace;
+    color: #00E5FF;
+    font-size: 24px;
+    font-weight: 700;
+    background: transparent;
+}
+
+QLabel#reportStatCaption {
+    color: #6B6B7B;
+    font-size: 10px;
+    letter-spacing: 2px;
+    background: transparent;
+}
+
+QLabel#reportBody {
+    color: #8A8A99;
+    font-size: 12px;
+    background: transparent;
+}
+
+
+/* ---------- Диалоги / настройки ---------- */
+QDialog, QFrame#dialogRoot {
+    background-color: #101017;
+    color: #C8C8D0;
+}
+
+QDialog QLabel {
+    background: transparent;
+    color: #C8C8D0;
+}
+
+QDialog QLabel#hintLabel {
+    color: #6B6B7B;
+}
+
+QDialogButtonBox QPushButton {
+    min-width: 96px;
+    text-align: center;
+    padding: 8px 18px;
+}
+
+/* ---------- Разделители ---------- */
+QFrame#divider {
+    background-color: #23232E;
+    max-height: 1px;
+    border: none;
+}
+
+/* ---------- Списки / текстовые поля ---------- */
+QListWidget, QTextEdit, QPlainTextEdit {
+    background-color: #1B1B24;
+    border: 1px solid #2A2A36;
+    border-radius: 8px;
+    color: #C8C8D0;
+    padding: 6px;
+    outline: none;
+}
+
+QListWidget::item {
+    padding: 7px 8px;
+    border-radius: 5px;
+}
+
+QListWidget::item:hover {
+    background-color: rgba(0, 229, 255, 0.08);
+}
+
+QListWidget::item:selected {
+    background-color: rgba(0, 229, 255, 0.18);
+    color: #00E5FF;
+}
+
+QPlainTextEdit, QTextEdit {
+    font-family: "JetBrains Mono", "Consolas", monospace;
+    font-size: 12px;
+}
+
+/* ---------- Скроллбары ---------- */
+QScrollBar:vertical {
+    background: transparent;
+    width: 11px;
+    margin: 4px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: #2A2A36;
+    min-height: 34px;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #00E5FF;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: transparent;
+    height: 0px;
+    width: 0px;
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 11px;
+    margin: 0px 4px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #2A2A36;
+    min-width: 34px;
+    border-radius: 5px;
+    margin: 2px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: #00E5FF;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal,
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: transparent;
+    width: 0px;
+    height: 0px;
+}
+
+/* ---------- Всплывающие окна ---------- */
+QMessageBox {
+    background-color: #101017;
+}
+
+QMessageBox QLabel {
+    color: #C8C8D0;
+    min-width: 320px;
+}
+
+/* ---------- Библиотека: кнопка добавления игры (v1.0) ---------- */
+QToolButton#addGameBtn {
+    background-color: rgba(0, 229, 255, 0.10);
+    color: #00E5FF;
+    border: 1px solid rgba(0, 229, 255, 0.45);
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QToolButton#addGameBtn:hover {
+    background-color: rgba(0, 229, 255, 0.18);
+    border-color: #00E5FF;
+}
+
+QToolButton#addGameBtn:pressed {
+    background-color: rgba(0, 229, 255, 0.28);
+}
+
+/* ---------- Обложка на карточке игры ---------- */
+QLabel#coverLabel {
+    background-color: #101018;
+    border: 1px solid #23232E;
+    border-radius: 6px;
+}
+
+/* ---------- Контекстное меню карточки ---------- */
+QMenu {
+    background-color: #16161D;
+    color: #C8C8D0;
+    border: 1px solid #23232E;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+QMenu::item {
+    background: transparent;
+    padding: 7px 22px;
+    border-radius: 4px;
+}
+
+QMenu::item:selected {
+    background-color: rgba(0, 229, 255, 0.15);
+    color: #00E5FF;
+}
+
+QMenu::separator {
+    height: 1px;
+    background-color: #23232E;
+    margin: 4px 6px;
+}
+
+/* ---------- Превью обложки в диалоге добавления ---------- */
+QLabel#coverPreview {
+    background-color: #101018;
+    color: #6B6B7B;
+    border: 1px dashed #2A2A36;
+    border-radius: 6px;
+}
+

@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="/styles">
+    <file>styles.qss</file>
+  </qresource>
+  <qresource prefix="/icons">
+    <file alias="logo.svg">icons/logo.svg</file>
+    <file alias="library.svg">icons/library.svg</file>
+    <file alias="monitor.svg">icons/monitor.svg</file>
+    <file alias="optimize.svg">icons/optimize.svg</file>
+    <file alias="restore.svg">icons/restore.svg</file>
+    <file alias="settings.svg">icons/settings.svg</file>
+    <file alias="play.svg">icons/play.svg</file>
+    <file alias="steam.svg">icons/steam.svg</file>
+    <file alias="epic.svg">icons/epic.svg</file>
+    <file alias="local.svg">icons/local.svg</file>
+    <file alias="download.svg">icons/download.svg</file>
+    <file alias="win-min.svg">icons/win-min.svg</file>
+    <file alias="win-max.svg">icons/win-max.svg</file>
+    <file alias="win-close.svg">icons/win-close.svg</file>
+  </qresource>
+</RCC>

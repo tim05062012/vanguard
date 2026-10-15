@@ -1,0 +1,15 @@
+build/
+dist/
+covers/
+local_games.json
+settings.json
+*.bak
+*.log
+*.user
+*.pro.user
+.vscode/
+.idea/
+*.o
+*.exe
+CMakeCache.txt
+CMakeFiles/

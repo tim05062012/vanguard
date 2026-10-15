@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity
+      type="win32"
+      name="VANGUARD.GameLauncher"
+      version="1.0.0.0"
+      processorArchitecture="*" />
+
+  <!-- PresentMon (ETW-трассировка кадров) требует прав администратора —
+       без elevation сборка кадров падает с «нет прав на ETW» (код 6).
+       VANGUARD запускается целиком с requestExecutionLevel=requireAdministrator. -->
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Windows 10 -->
+      <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
+      <!-- Windows 11 -->
+      <supportedOS Id="{4f476546-937d-4f54-8a0b-b1f0c1b2d3e4}" />
+    </application>
+  </compatibility>
+
+  <asmv3:application xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
+    <asmv3:windowsSettings xmlns:ws2="http://schemas.microsoft.com/SMI/2016/WindowsSettings">
+      <ws2:longPathAware>true</ws2:longPathAware>
+    </asmv3:windowsSettings>
+    <asmv3:windowsSettings xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">
+      <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">PerMonitorV2,PerMonitor</dpiAware>
+    </asmv3:windowsSettings>
+  </asmv3:application>
+</assembly>
